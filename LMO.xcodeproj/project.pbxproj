@@ -23,6 +23,8 @@
 		A39B3DBF1D339E3E0074B74F /* LMMainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3DBC1D339E3E0074B74F /* LMMainNavigationController.swift */; };
 		A39B3DC01D339E3E0074B74F /* LMMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3DBD1D339E3E0074B74F /* LMMainTabBarController.swift */; };
 		A39B3DC41D3491F10074B74F /* LMNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3DC31D3491F10074B74F /* LMNetworkTools.swift */; };
+		A39B3DC81D350C480074B74F /* LMAddNewFileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3DC71D350C480074B74F /* LMAddNewFileController.swift */; };
+		A39B3DCC1D350FFC0074B74F /* LMTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3DCB1D350FFC0074B74F /* LMTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		A39B3DBC1D339E3E0074B74F /* LMMainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMMainNavigationController.swift; sourceTree = "<group>"; };
 		A39B3DBD1D339E3E0074B74F /* LMMainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMMainTabBarController.swift; sourceTree = "<group>"; };
 		A39B3DC31D3491F10074B74F /* LMNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMNetworkTools.swift; sourceTree = "<group>"; };
+		A39B3DC71D350C480074B74F /* LMAddNewFileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMAddNewFileController.swift; sourceTree = "<group>"; };
+		A39B3DCB1D350FFC0074B74F /* LMTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMTextView.swift; sourceTree = "<group>"; };
 		B3DAC7DF4AD4A51C240A92A2 /* Pods-LMO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LMO/Pods-LMO.debug.xcconfig"; sourceTree = "<group>"; };
 		EA19B5B9FA637EB0BEAC3C54 /* Pods-LMO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMO.release.xcconfig"; path = "Pods/Target Support Files/Pods-LMO/Pods-LMO.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +164,7 @@
 		A39B3DA81D339B870074B74F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A39B3DC91D350FE30074B74F /* Other */,
 				A39B3DBA1D339E2D0074B74F /* Main */,
 				A39B3DA91D339B870074B74F /* FirstPage */,
 				A39B3DAB1D339B870074B74F /* Me */,
@@ -172,6 +177,7 @@
 			children = (
 				A39B3DAA1D339B870074B74F /* View */,
 				A39B3DB81D339DDD0074B74F /* LMFirstPageViewController.swift */,
+				A39B3DC71D350C480074B74F /* LMAddNewFileController.swift */,
 			);
 			path = FirstPage;
 			sourceTree = "<group>";
@@ -206,6 +212,22 @@
 				A39B3DBD1D339E3E0074B74F /* LMMainTabBarController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		A39B3DC91D350FE30074B74F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A39B3DCA1D350FE30074B74F /* View */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		A39B3DCA1D350FE30074B74F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A39B3DCB1D350FFC0074B74F /* LMTextView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,11 +355,13 @@
 			files = (
 				A39B3DB21D339C0D0074B74F /* UIBarButtonItem+Extension.swift in Sources */,
 				A39B3D941D339AD20074B74F /* ViewController.swift in Sources */,
+				A39B3DC81D350C480074B74F /* LMAddNewFileController.swift in Sources */,
 				A39B3DBF1D339E3E0074B74F /* LMMainNavigationController.swift in Sources */,
 				A39B3DBE1D339E3E0074B74F /* LMBaseViewController.swift in Sources */,
 				A39B3DC01D339E3E0074B74F /* LMMainTabBarController.swift in Sources */,
 				A39B3DB61D339C150074B74F /* UIDevice+DeviceModel.swift in Sources */,
 				A39B3DB31D339C0D0074B74F /* UIColor+extension.swift in Sources */,
+				A39B3DCC1D350FFC0074B74F /* LMTextView.swift in Sources */,
 				A39B3DC41D3491F10074B74F /* LMNetworkTools.swift in Sources */,
 				A39B3DB91D339DDD0074B74F /* LMFirstPageViewController.swift in Sources */,
 				A39B3DB41D339C0D0074B74F /* UIImage+Extension.swift in Sources */,
