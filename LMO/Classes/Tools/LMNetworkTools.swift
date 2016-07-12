@@ -13,6 +13,7 @@ enum LMRequestMethod: String {
     case GET = "GET"
     case POST = "POST"
     case DELETE = "DELETE"
+    case PUT = "PUT"
 }
 
 class LMNetworkTools: NSObject {
@@ -49,6 +50,12 @@ class LMNetworkTools: NSObject {
         
         if method == .DELETE {
             Alamofire.request(.DELETE, urlString, parameters: parameters).responseJSON {response in
+                finished(response: response.result.value, error: response.result.error)
+            }
+        }
+        
+        if method == .PUT {
+            Alamofire.request(.PUT, urlString, parameters: parameters).responseJSON {response in
                 finished(response: response.result.value, error: response.result.error)
             }
         }
