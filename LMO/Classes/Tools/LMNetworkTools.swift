@@ -41,5 +41,17 @@ class LMNetworkTools: NSObject {
             }
         }
         
+        if method == .POST {
+            Alamofire.request(.POST, urlString, parameters: parameters).responseJSON {response in
+                finished(response: response.result.value, error: response.result.error)
+            }
+        }
+        
+        if method == .DELETE {
+            Alamofire.request(.DELETE, urlString, parameters: parameters).responseJSON {response in
+                finished(response: response.result.value, error: response.result.error)
+            }
+        }
+        
     }
 }
