@@ -23,6 +23,7 @@ class LMFirstPageViewController: UIViewController {
         
         LoginBtn.snp_makeConstraints { (make) in
             make.centerX.centerY.equalTo(view)
+            make.width.equalTo(150)
         }
     }
     
@@ -32,12 +33,12 @@ class LMFirstPageViewController: UIViewController {
         navigationController?.pushViewController(VC, animated: true)
     }
     
-    lazy var LoginBtn:UIButton = {
-        let loginBtn:UIButton = UIButton()
-        loginBtn.backgroundColor = UIColor.blueColor()
-        loginBtn.setTitle("点击进入", forState: .Normal)
+    lazy var LoginBtn:LMDateButton = {
+        let loginBtn:LMDateButton = LMDateButton(title: "点击进入", image: UIImage(named:"home_im"))
+//        loginBtn.backgroundColor = LMBlueColor
+//        loginBtn.setTitle("点击进入", forState: .Normal)
         loginBtn.addTarget(self, action: #selector(LMFirstPageViewController.clickLoginBtn(_:)), forControlEvents: .TouchUpInside)
         return loginBtn
     }()
-
+    
 }
