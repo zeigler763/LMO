@@ -8,6 +8,7 @@
 
 import UIKit
 import AFViewShaker
+import WKProgressHUD
 
 class LMLoginViewController: UIViewController {
 
@@ -29,8 +30,36 @@ class LMLoginViewController: UIViewController {
     }
     
     @objc private func clickLoginBtn(button:UIButton){
-        shakeAccount.shakeWithDuration(0.7) { 
-            
+        if nameTextView.rightTextFiled?.text == "" {
+            shakeAccount.shakeWithDuration(0.7, completion: { 
+                WKProgressHUD.popMessage("请您输入帐号", inView: self.view, duration: 1, animated: true)
+            })
+            return
+        }
+        if passWordView.rightTextFiled?.text == "" {
+            shakePwd.shakeWithDuration(0.7, completion: {
+                WKProgressHUD.popMessage("请您输入密码", inView: self.view, duration: 1, animated: true)
+            })
+            return
+        }
+        
+        LMNetworkTools.sharedTools.userLogin((nameTextView.rightTextFiled?.text)!, pwd: (passWordView.rightTextFiled?.text)!) { (response, error) in
+            if error != nil {
+                print(error)
+                return
+            }
+            print(response)
+            let massage = response!["code"] as! String
+            if massage == "0000" {
+                WKProgressHUD.popMessage("登录成功！", inView: self.view, duration: 1, animated: true)
+                
+            }else{
+                self.shakeAccount.shakeWithDuration(0.7, completion: { 
+                })
+                self.shakePwd.shakeWithDuration(0.7, completion: {
+                })
+                WKProgressHUD.popMessage("暂无帐号或密码！请确认后重新登录！", inView: self.view, duration: 1, animated: true)
+            }
         }
     }
     

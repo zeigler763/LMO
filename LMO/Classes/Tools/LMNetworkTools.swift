@@ -79,4 +79,17 @@ extension LMNetworkTools{
         
         request(.POST, urlString: urlString, parameters: params, finished: finished)
     }
+    
+    //登录接口
+    func userLogin(username:String, pwd:String, finished:LMRequestCallBack) {
+        let urlString = NetString + "/user/login"
+        // 定义参数
+        let params = [
+            "username": username,
+            "pwd": pwd
+        ]
+        
+        request(.POST, urlString: urlString, parameters: params, finished: finished)
+
+    }
 }
