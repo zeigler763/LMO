@@ -12,6 +12,6 @@ pod 'SDWebImage'
 pod 'WKProgressHUD'
 #pod 'IQKeyboardManagerSwift'
 pod 'MJRefresh'
-
+pod "AFViewShaker", "~> 0.0.2"
 end
 

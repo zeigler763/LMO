@@ -34,6 +34,8 @@
 		A39B3E6B1D377C4D0074B74F /* Reflect+Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3E631D377C4D0074B74F /* Reflect+Property.swift */; };
 		A39B3E6C1D377C4D0074B74F /* Reflect+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3E641D377C4D0074B74F /* Reflect+Type.swift */; };
 		A39B3E6D1D377C4D0074B74F /* Reflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3E651D377C4D0074B74F /* Reflect.swift */; };
+		A39B3E811D3DBC660074B74F /* LMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3E801D3DBC660074B74F /* LMLoginViewController.swift */; };
+		A39B3E831D3DD67B0074B74F /* LMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3E821D3DD67B0074B74F /* LMTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		A39B3E631D377C4D0074B74F /* Reflect+Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reflect+Property.swift"; sourceTree = "<group>"; };
 		A39B3E641D377C4D0074B74F /* Reflect+Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reflect+Type.swift"; sourceTree = "<group>"; };
 		A39B3E651D377C4D0074B74F /* Reflect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reflect.swift; sourceTree = "<group>"; };
+		A39B3E801D3DBC660074B74F /* LMLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMLoginViewController.swift; sourceTree = "<group>"; };
+		A39B3E821D3DD67B0074B74F /* LMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMTextField.swift; sourceTree = "<group>"; };
 		B3DAC7DF4AD4A51C240A92A2 /* Pods-LMO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LMO/Pods-LMO.debug.xcconfig"; sourceTree = "<group>"; };
 		EA19B5B9FA637EB0BEAC3C54 /* Pods-LMO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMO.release.xcconfig"; path = "Pods/Target Support Files/Pods-LMO/Pods-LMO.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				A39B3DAC1D339B870074B74F /* View */,
+				A39B3E801D3DBC660074B74F /* LMLoginViewController.swift */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 		A39B3DAC1D339B870074B74F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A39B3E821D3DD67B0074B74F /* LMTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 		A39B3D861D339AD20074B74F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LM;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = zlycare;
@@ -427,6 +434,7 @@
 				A39B3DBF1D339E3E0074B74F /* LMMainNavigationController.swift in Sources */,
 				A39B3E6A1D377C4D0074B74F /* Reflect+Other.swift in Sources */,
 				A39B3DBE1D339E3E0074B74F /* LMBaseViewController.swift in Sources */,
+				A39B3E811D3DBC660074B74F /* LMLoginViewController.swift in Sources */,
 				A39B3E681D377C4D0074B74F /* Reflect+Convert.swift in Sources */,
 				A39B3DC01D339E3E0074B74F /* LMMainTabBarController.swift in Sources */,
 				A39B3E6D1D377C4D0074B74F /* Reflect.swift in Sources */,
@@ -443,6 +451,7 @@
 				A39B3DB41D339C0D0074B74F /* UIImage+Extension.swift in Sources */,
 				A39B3D921D339AD20074B74F /* AppDelegate.swift in Sources */,
 				A39B3DAE1D339BC50074B74F /* CommonTools.swift in Sources */,
+				A39B3E831D3DD67B0074B74F /* LMTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,9 +34,8 @@ class LMFirstPageViewController: UIViewController {
     }
     
     lazy var LoginBtn:LMDateButton = {
-        let loginBtn:LMDateButton = LMDateButton(title: "点击进入", image: UIImage(named:"home_im"))
-//        loginBtn.backgroundColor = LMBlueColor
-//        loginBtn.setTitle("点击进入", forState: .Normal)
+        let loginBtn:LMDateButton = LMDateButton(title: "点击进入", image: UIImage(named:"home_im"), font:14)
+        loginBtn.titleText?.font = UIFont.systemFontOfSize(12)
         loginBtn.addTarget(self, action: #selector(LMFirstPageViewController.clickLoginBtn(_:)), forControlEvents: .TouchUpInside)
         return loginBtn
     }()

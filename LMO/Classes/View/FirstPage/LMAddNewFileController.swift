@@ -72,7 +72,7 @@ class LMAddNewFileController: UIViewController {
         self.remarkTextView = remarkTextView
         
         remarkLabel.text = "备注"
-        remarkLabel.textColor = UIColor.lightGrayColor()
+        remarkLabel.textColor = LMGayColor
         remarkLabel.font = UIFont.systemFontOfSize(14)
         
         remarkTextView.font = UIFont.systemFontOfSize(13)
@@ -88,7 +88,7 @@ class LMAddNewFileController: UIViewController {
         
         remarkTextView.snp_makeConstraints(closure: { (make) in
             make.left.equalTo(remarkLabel.snp_right)
-            make.top.right.equalTo(remark)
+            make.top.right.equalTo(remark).offset(2)
             make.bottom.equalTo(remark).offset(-5)
         })
         
@@ -100,15 +100,47 @@ class LMAddNewFileController: UIViewController {
         date.backgroundColor = UIColor.whiteColor()
         
         let lineView:UIView = UIView()
+        let useDateLabel:UILabel = UILabel()
+        let dateLongLabel:UILabel = UILabel()
+        let useDateBtn:LMDateButton = LMDateButton(title: "2016-7-15", image: UIImage(named: "home_im"), font: 14)
         
         lineView.backgroundColor = LMLineColor
         
+        useDateLabel.text = "使用日期"
+        useDateLabel.textColor = LMGayColor
+        useDateLabel.font = UIFont.systemFontOfSize(14)
+        
+        dateLongLabel.text = "使用时长"
+        dateLongLabel.textColor = LMGayColor
+        dateLongLabel.font = UIFont.systemFontOfSize(14)
+        
         date.addSubview(lineView)
+        date.addSubview(useDateLabel)
+        date.addSubview(dateLongLabel)
+        date.addSubview(useDateBtn)
+        
         
         lineView.snp_makeConstraints(closure: { (make) in
             make.centerX.centerY.equalTo(date)
             make.width.equalTo(1)
             make.height.equalTo(80)
+        })
+        
+        useDateLabel.snp_makeConstraints(closure: { (make) in
+            make.centerX.equalTo(date).offset(-SCREENW/4)
+            make.top.equalTo(lineView).offset(5)
+        })
+        
+        dateLongLabel.snp_makeConstraints(closure: { (make) in
+            make.centerX.equalTo(date).offset(SCREENW/4)
+            make.top.equalTo(lineView).offset(5)
+        })
+        
+        useDateBtn.snp_makeConstraints(closure: { (make) in
+            make.left.equalTo(date)
+            make.right.equalTo(lineView.snp_left)
+            make.top.equalTo(useDateLabel.snp_bottom).offset(10)
+            make.height.equalTo(30)
         })
         
         return date

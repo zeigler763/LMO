@@ -10,16 +10,24 @@ import UIKit
 
 class LMDateButton: UIButton {
     
-    var titleText:UILabel?
+    var titleText:UILabel? {
+        didSet{
+            titleLabel?.font = titleText?.font
+        }
+    }
     
     var imageText:UIImageView?
     
-    convenience init(title:String?, image:UIImage?){
+    convenience init(title:String?, image:UIImage?, font:CGFloat?){
         self.init()
         titleText = UILabel()
         titleText?.text = title
-        titleText?.font = self.titleLabel?.font
         imageText = UIImageView(image: image)
+        
+        if font != nil {
+            
+            titleText?.font = UIFont.systemFontOfSize(font!)
+        }
         
         addSubview(titleText!)
         addSubview(imageText!)
@@ -30,7 +38,7 @@ class LMDateButton: UIButton {
         
         titleText?.snp_makeConstraints(closure: { (make) in
             make.centerY.equalTo(self)
-            make.left.equalTo(self)
+            make.centerX.equalTo(self)
         })
         
         imageText?.snp_makeConstraints(closure: { (make) in

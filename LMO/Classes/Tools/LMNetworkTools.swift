@@ -19,7 +19,7 @@ enum LMRequestMethod: String {
 class LMNetworkTools: NSObject {
    
     //请求地址
-    let NetString = ""
+    let NetString = "http://192.168.1.16:9501"
     
     //定义回调的别名
     typealias LMRequestCallBack = (response: AnyObject?, error: NSError?)->()
@@ -60,5 +60,23 @@ class LMNetworkTools: NSObject {
             }
         }
         
+    }
+}
+
+//MARK: - 登录注册逻辑
+extension LMNetworkTools{
+    
+    //注册接口
+    func userRegister(username:String, pwd:String, pwd2:String, finished:LMRequestCallBack) {
+        
+        let urlString = NetString + "/user/register"
+        // 定义参数
+        let params = [
+            "username": username,
+            "pwd": pwd,
+            "pwd2": pwd2
+        ]
+        
+        request(.POST, urlString: urlString, parameters: params, finished: finished)
     }
 }
