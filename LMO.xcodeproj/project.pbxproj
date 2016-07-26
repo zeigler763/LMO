@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		87BA857A8ECB255BEB52233F /* Pods_LMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2E18A1CB6599B02F1878DD /* Pods_LMO.framework */; };
+		A36FB2791D475799008AC705 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A36FB2761D475799008AC705 /* FBShimmeringLayer.m */; };
+		A36FB27A1D475799008AC705 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = A36FB2781D475799008AC705 /* FBShimmeringView.m */; };
+		A36FB27C1D475821008AC705 /* ZGRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36FB27B1D475821008AC705 /* ZGRefreshControl.swift */; };
+		A36FB27E1D475832008AC705 /* UIView+ES_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36FB27D1D475832008AC705 /* UIView+ES_Extension.swift */; };
 		A39B3D921D339AD20074B74F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3D911D339AD20074B74F /* AppDelegate.swift */; };
 		A39B3D941D339AD20074B74F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3D931D339AD20074B74F /* ViewController.swift */; };
 		A39B3D971D339AD20074B74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39B3D951D339AD20074B74F /* Main.storyboard */; };
@@ -40,6 +44,14 @@
 
 /* Begin PBXFileReference section */
 		2D2E18A1CB6599B02F1878DD /* Pods_LMO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LMO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A36FB2731D475799008AC705 /* FBShimmering-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBShimmering-Prefix.pch"; sourceTree = "<group>"; };
+		A36FB2741D475799008AC705 /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
+		A36FB2751D475799008AC705 /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringLayer.h; sourceTree = "<group>"; };
+		A36FB2761D475799008AC705 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
+		A36FB2771D475799008AC705 /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
+		A36FB2781D475799008AC705 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
+		A36FB27B1D475821008AC705 /* ZGRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZGRefreshControl.swift; sourceTree = "<group>"; };
+		A36FB27D1D475832008AC705 /* UIView+ES_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ES_Extension.swift"; sourceTree = "<group>"; };
 		A39B3D8E1D339AD20074B74F /* LMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39B3D911D339AD20074B74F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39B3D931D339AD20074B74F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +114,19 @@
 				EA19B5B9FA637EB0BEAC3C54 /* Pods-LMO.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A36FB2721D475799008AC705 /* FBShimmering */ = {
+			isa = PBXGroup;
+			children = (
+				A36FB2731D475799008AC705 /* FBShimmering-Prefix.pch */,
+				A36FB2741D475799008AC705 /* FBShimmering.h */,
+				A36FB2751D475799008AC705 /* FBShimmeringLayer.h */,
+				A36FB2761D475799008AC705 /* FBShimmeringLayer.m */,
+				A36FB2771D475799008AC705 /* FBShimmeringView.h */,
+				A36FB2781D475799008AC705 /* FBShimmeringView.m */,
+			);
+			path = FBShimmering;
 			sourceTree = "<group>";
 		};
 		A39B3D851D339AD20074B74F = {
@@ -172,6 +197,7 @@
 				A39B3DB01D339C0D0074B74F /* UIColor+extension.swift */,
 				A39B3DB11D339C0D0074B74F /* UIImage+Extension.swift */,
 				A39B3DB51D339C150074B74F /* UIDevice+DeviceModel.swift */,
+				A36FB27D1D475832008AC705 /* UIView+ES_Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -179,6 +205,7 @@
 		A39B3DA71D339B870074B74F /* ThirdLibs */ = {
 			isa = PBXGroup;
 			children = (
+				A36FB2721D475799008AC705 /* FBShimmering */,
 				A39B3E591D377C4D0074B74F /* Reflect */,
 			);
 			path = ThirdLibs;
@@ -252,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				A39B3DCB1D350FFC0074B74F /* LMTextView.swift */,
+				A36FB27B1D475821008AC705 /* ZGRefreshControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -436,6 +464,7 @@
 				A39B3DBE1D339E3E0074B74F /* LMBaseViewController.swift in Sources */,
 				A39B3E811D3DBC660074B74F /* LMLoginViewController.swift in Sources */,
 				A39B3E681D377C4D0074B74F /* Reflect+Convert.swift in Sources */,
+				A36FB27E1D475832008AC705 /* UIView+ES_Extension.swift in Sources */,
 				A39B3DC01D339E3E0074B74F /* LMMainTabBarController.swift in Sources */,
 				A39B3E6D1D377C4D0074B74F /* Reflect.swift in Sources */,
 				A39B3E661D377C4D0074B74F /* Reflect+ArcFile.swift in Sources */,
@@ -445,12 +474,15 @@
 				A39B3E671D377C4D0074B74F /* Reflect+Parse.swift in Sources */,
 				A39B3DB61D339C150074B74F /* UIDevice+DeviceModel.swift in Sources */,
 				A39B3DB31D339C0D0074B74F /* UIColor+extension.swift in Sources */,
+				A36FB27C1D475821008AC705 /* ZGRefreshControl.swift in Sources */,
 				A39B3DCC1D350FFC0074B74F /* LMTextView.swift in Sources */,
 				A39B3DC41D3491F10074B74F /* LMNetworkTools.swift in Sources */,
 				A39B3DB91D339DDD0074B74F /* LMFirstPageViewController.swift in Sources */,
 				A39B3DB41D339C0D0074B74F /* UIImage+Extension.swift in Sources */,
+				A36FB2791D475799008AC705 /* FBShimmeringLayer.m in Sources */,
 				A39B3D921D339AD20074B74F /* AppDelegate.swift in Sources */,
 				A39B3DAE1D339BC50074B74F /* CommonTools.swift in Sources */,
+				A36FB27A1D475799008AC705 /* FBShimmeringView.m in Sources */,
 				A39B3E831D3DD67B0074B74F /* LMTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

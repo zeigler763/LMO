@@ -3,7 +3,7 @@
 import UIKit
 import Foundation
 
-// 红色
+// 蓝色
 let LMBlueColor = UIColor.colorWithHexString("#99D1D3")
 // 灰色
 let LMGayColor = UIColor.colorWithHexString("#909090")

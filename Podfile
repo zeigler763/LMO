@@ -10,7 +10,7 @@ pod 'SnapKit'
 pod 'Alamofire', '~> 3.4'
 pod 'SDWebImage'
 pod 'WKProgressHUD'
-#pod 'IQKeyboardManagerSwift'
+pod 'IQKeyboardManagerSwift'
 pod 'MJRefresh'
 pod "AFViewShaker", "~> 0.0.2"
 end
