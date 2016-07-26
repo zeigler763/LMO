@@ -28,7 +28,8 @@ class ZGRefreshControl: UIControl {
     var refreshState: ZGRefreshState = .Normal {
         didSet{
             switch refreshState {
-            case .Pulling: break
+            case .Pulling:
+                return
             case .Normal:
             if oldState == .Refreshing {
                 UIView.animateWithDuration(0.25, animations: { () -> Void in
@@ -74,8 +75,6 @@ class ZGRefreshControl: UIControl {
         
         addSubview(shimmeringView)
         shimmeringView.contentView = textLabel
-//        shimmeringView.shimmering = true
-        
     }
     
     override func willMoveToSuperview(newSuperview: UIView?) {
@@ -96,9 +95,9 @@ class ZGRefreshControl: UIControl {
         let criticalValue = -contentInsetTop - self.es_height
         
         if scrollView!.dragging {
-            if contentOffsetY < criticalValue {
+            if refreshState == .Normal && contentOffsetY < criticalValue {
                 self.refreshState = .Pulling
-            }else if contentOffsetY >= criticalValue {
+            }else if refreshState == .Pulling && contentOffsetY >= criticalValue {
                 self.refreshState = .Normal
             }
         }else{
@@ -119,6 +118,8 @@ class ZGRefreshControl: UIControl {
     //添加闪烁效果
     private lazy var shimmeringView:FBShimmeringView = {
        let shimmer = FBShimmeringView(frame: CGRect(x: 0, y: 0, width: SCREENW, height: ZGRefreshStateHeight))
+        shimmer.shimmeringSpeed = 200
+        shimmer.shimmeringPauseDuration = 0
         return shimmer
     }()
     
@@ -135,7 +136,7 @@ class ZGRefreshControl: UIControl {
 //        let attributeDict3 = [NSFontAttributeName:UIFont.systemFontOfSize(22),NSForegroundColorAttributeName:UIColor.blackColor(),NSStrokeWidthAttributeName:3,NSStrokeColorAttributeName:UIColor.blackColor(),NSShadowAttributeName:shadow,NSVerticalGlyphFormAttributeName:0]
 //        let attributeDict4 = [NSFontAttributeName:UIFont.systemFontOfSize(22),NSForegroundColorAttributeName:UIColor.blackColor(),NSStrokeWidthAttributeName:3,NSStrokeColorAttributeName:UIColor.blackColor(),NSShadowAttributeName:shadow,NSVerticalGlyphFormAttributeName:0]
 //        let attributeDict5 = [NSFontAttributeName:UIFont.systemFontOfSize(22),NSForegroundColorAttributeName:UIColor.blackColor(),NSStrokeWidthAttributeName:3,NSStrokeColorAttributeName:UIColor.blackColor(),NSShadowAttributeName:shadow,NSVerticalGlyphFormAttributeName:0]
-        let attributedStr = NSMutableAttributedString(string: "R o m e o T e a m")
+        let attributedStr = NSMutableAttributedString(string: "RomeoTeam")
         attributedStr.addAttributes(attributeDict1, range: NSRange(location: 0, length: attributedStr.length))
 //        attributedStr.addAttributes(attributeDict2, range: NSRange(location: 2, length: 1))
 //        attributedStr.addAttributes(attributeDict3, range: NSRange(location: 4, length: 1))
