@@ -31,18 +31,18 @@ class LMTextField: UIView, UITextFieldDelegate {
         rightTextFiled?.delegate = self
         rightTextFiled?.font = UIFont.systemFontOfSize(14)
         rightTextFiled?.alpha = 0.5
-        rightTextFiled?.textColor = UIColor.whiteColor()
+        rightTextFiled?.textColor = UIColor.blackColor()
         rightTextFiled?.clearButtonMode = .Always
         rightTextFiled?.autocapitalizationType = .None
-        rightTextFiled?.tintColor = UIColor.whiteColor()
+        rightTextFiled?.tintColor = UIColor.blackColor()
         
         if let place = placeHold {
-        let dic = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        let dic = [NSForegroundColorAttributeName:UIColor.blackColor()]
         rightTextFiled?.attributedPlaceholder = NSAttributedString(string: place, attributes: dic)
         }
         
         lineView = UIView(frame: CGRect(x: 0, y: rightTextFiled!.frame.origin.y + rightTextFiled!.frame.height, width: frame.size.width, height: 0.5))
-        lineView?.backgroundColor = UIColor.whiteColor()
+        lineView?.backgroundColor = UIColor.blackColor()
         addSubview(lineView!)
     }
     

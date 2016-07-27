@@ -14,7 +14,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         view.backgroundColor = UIColor.whiteColor()
         
         view.addSubview(tableView)
@@ -26,24 +26,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.addSubview(refreshControl)
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-//        LMNetworkTools.sharedTools.userRegister("于世民", pwd: "123", pwd2: "123") { (response, error) in
-//            if error != nil{
-//                print(error)
-//                return
-//            }
-//            print(response)
-//        }
-//        
-//        let button = UIButton()
-//        button.setTitle("登录", forState: .Normal)
-//        button.backgroundColor = UIColor.redColor()
-//        button.addTarget(self, action: #selector(ViewController.clickLoginBtn), forControlEvents: .TouchUpInside)
-//        
-//        view.addSubview(button)
-//        
-//        button.snp_makeConstraints { (make) in
-//            make.centerX.centerY.equalTo(view)
-//        }
+        
     }
     
     // 模拟加载数据
@@ -80,6 +63,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         cell.textLabel?.text = dataArray[indexPath.row]
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let LoginVC = LMLoginViewController()
+        self.navigationController?.pushViewController(LoginVC, animated: true)
     }
     
     private lazy var tableView:UITableView = {

@@ -27,7 +27,7 @@ class LMMainTabBarController: UITabBarController {
         
         //文字颜色的属性
         let textColorAttr = [
-            NSForegroundColorAttributeName: LMBlueColor
+            NSForegroundColorAttributeName: LMYellowColor
         ]
         //设置选中文字颜色
         vc.tabBarItem.setTitleTextAttributes(textColorAttr, forState: UIControlState.Selected)

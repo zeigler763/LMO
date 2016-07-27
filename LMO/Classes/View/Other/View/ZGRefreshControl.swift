@@ -125,13 +125,13 @@ class ZGRefreshControl: UIControl {
     
     private lazy var textLabel:UILabel = {
         let textLabel:UILabel = UILabel(frame: self.shimmeringView.frame)
-        
+        textLabel.font = UIFont(name: "Deutsch Gothic", size: 26)
         let shadow = NSShadow()
         shadow.shadowBlurRadius = 3
         shadow.shadowColor = UIColor.darkGrayColor()
         shadow.shadowOffset = CGSize(width: 1, height: 3)
         
-        let attributeDict1 = [NSFontAttributeName:UIFont.systemFontOfSize(24),NSForegroundColorAttributeName:UIColor.blackColor(),NSStrokeWidthAttributeName:-3,NSStrokeColorAttributeName:LMBlueColor,NSShadowAttributeName:shadow,NSVerticalGlyphFormAttributeName:0]
+        let attributeDict1 = [NSForegroundColorAttributeName:LMYellowColor,NSStrokeWidthAttributeName:-3,NSStrokeColorAttributeName:UIColor.blackColor(),NSShadowAttributeName:shadow,NSVerticalGlyphFormAttributeName:0]
 //        let attributeDict2 = [NSFontAttributeName:UIFont.systemFontOfSize(22),NSForegroundColorAttributeName:UIColor.blackColor(),NSStrokeWidthAttributeName:3,NSStrokeColorAttributeName:UIColor.blackColor(),NSShadowAttributeName:shadow,NSVerticalGlyphFormAttributeName:0]
 //        let attributeDict3 = [NSFontAttributeName:UIFont.systemFontOfSize(22),NSForegroundColorAttributeName:UIColor.blackColor(),NSStrokeWidthAttributeName:3,NSStrokeColorAttributeName:UIColor.blackColor(),NSShadowAttributeName:shadow,NSVerticalGlyphFormAttributeName:0]
 //        let attributeDict4 = [NSFontAttributeName:UIFont.systemFontOfSize(22),NSForegroundColorAttributeName:UIColor.blackColor(),NSStrokeWidthAttributeName:3,NSStrokeColorAttributeName:UIColor.blackColor(),NSShadowAttributeName:shadow,NSVerticalGlyphFormAttributeName:0]

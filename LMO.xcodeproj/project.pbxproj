@@ -12,6 +12,8 @@
 		A36FB27A1D475799008AC705 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = A36FB2781D475799008AC705 /* FBShimmeringView.m */; };
 		A36FB27C1D475821008AC705 /* ZGRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36FB27B1D475821008AC705 /* ZGRefreshControl.swift */; };
 		A36FB27E1D475832008AC705 /* UIView+ES_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36FB27D1D475832008AC705 /* UIView+ES_Extension.swift */; };
+		A36FB2841D484DBE008AC705 /* Deutsch Gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A36FB2831D484DBE008AC705 /* Deutsch Gothic.ttf */; };
+		A36FB2861D485ECA008AC705 /* LMRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36FB2851D485ECA008AC705 /* LMRegisterViewController.swift */; };
 		A39B3D921D339AD20074B74F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3D911D339AD20074B74F /* AppDelegate.swift */; };
 		A39B3D941D339AD20074B74F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B3D931D339AD20074B74F /* ViewController.swift */; };
 		A39B3D971D339AD20074B74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39B3D951D339AD20074B74F /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 		A36FB2781D475799008AC705 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
 		A36FB27B1D475821008AC705 /* ZGRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZGRefreshControl.swift; sourceTree = "<group>"; };
 		A36FB27D1D475832008AC705 /* UIView+ES_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ES_Extension.swift"; sourceTree = "<group>"; };
+		A36FB2831D484DBE008AC705 /* Deutsch Gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Deutsch Gothic.ttf"; sourceTree = "<group>"; };
+		A36FB2851D485ECA008AC705 /* LMRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMRegisterViewController.swift; sourceTree = "<group>"; };
 		A39B3D8E1D339AD20074B74F /* LMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39B3D911D339AD20074B74F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39B3D931D339AD20074B74F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 				A39B3D911D339AD20074B74F /* AppDelegate.swift */,
 				A39B3D931D339AD20074B74F /* ViewController.swift */,
 				A39B3DB71D339CBD0074B74F /* Bridge-Header.h */,
+				A36FB2831D484DBE008AC705 /* Deutsch Gothic.ttf */,
 				A39B3D951D339AD20074B74F /* Main.storyboard */,
 				A39B3D981D339AD20074B74F /* Assets.xcassets */,
 				A39B3D9A1D339AD20074B74F /* LaunchScreen.storyboard */,
@@ -245,6 +250,7 @@
 			children = (
 				A39B3DAC1D339B870074B74F /* View */,
 				A39B3E801D3DBC660074B74F /* LMLoginViewController.swift */,
+				A36FB2851D485ECA008AC705 /* LMRegisterViewController.swift */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -397,6 +403,7 @@
 				A39B3D9C1D339AD20074B74F /* LaunchScreen.storyboard in Resources */,
 				A39B3D991D339AD20074B74F /* Assets.xcassets in Resources */,
 				A39B3D971D339AD20074B74F /* Main.storyboard in Resources */,
+				A36FB2841D484DBE008AC705 /* Deutsch Gothic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +478,7 @@
 				A39B3E691D377C4D0074B74F /* Reflect+Class.swift in Sources */,
 				A39B3E581D3779430074B74F /* LMDateButton.swift in Sources */,
 				A39B3E6B1D377C4D0074B74F /* Reflect+Property.swift in Sources */,
+				A36FB2861D485ECA008AC705 /* LMRegisterViewController.swift in Sources */,
 				A39B3E671D377C4D0074B74F /* Reflect+Parse.swift in Sources */,
 				A39B3DB61D339C150074B74F /* UIDevice+DeviceModel.swift in Sources */,
 				A39B3DB31D339C0D0074B74F /* UIColor+extension.swift in Sources */,

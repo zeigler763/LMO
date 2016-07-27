@@ -14,18 +14,22 @@ class LMLoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = LMBackGayColor
         setupUI()
     }
     
     private func setupUI(){
-        view.addSubview(backImageView)
+        title = "登录"
+        view.addSubview(iconImageView)
         view.addSubview(nameTextView)
         view.addSubview(passWordView)
         view.addSubview(loginButton)
+        view.addSubview(registerBtn)
         
-        backImageView.snp_makeConstraints { (make) in
-            make.edges.equalTo(view)
+        iconImageView.snp_makeConstraints { (make) in
+            make.centerX.equalTo(view)
+            make.top.equalTo(view).offset(35)
+            make.width.height.equalTo(90)
         }
     }
     
@@ -63,9 +67,14 @@ class LMLoginViewController: UIViewController {
         }
     }
     
+    @objc private func clickRegisterBtn(){
+        let registerVC = LMRegisterViewController()
+        navigationController?.pushViewController(registerVC, animated: true)
+    }
+    
     private lazy var backImageView:UIImageView = {
        let back = UIImageView()
-        back.image = UIImage(named: "timg")
+//        back.image = UIImage(named: "timg")
         return back
     }()
     
@@ -73,6 +82,14 @@ class LMLoginViewController: UIViewController {
        let blurEffect = UIBlurEffect(style: .Light)
        let effect = UIVisualEffectView(effect: blurEffect)
         return effect
+    }()
+    
+    private lazy var iconImageView:UIImageView = {
+       let imageView = UIImageView()
+        imageView.image = UIImage(named: "avatar")
+//        imageView.layer.cornerRadius = 40
+//        imageView.clipsToBounds = true
+        return imageView
     }()
     
     private lazy var nameTextView:LMTextField = {
@@ -92,9 +109,9 @@ class LMLoginViewController: UIViewController {
         loginBtn.setTitle("登录", forState: .Normal)
         loginBtn.titleLabel?.font = UIFont.systemFontOfSize(20)
         loginBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        loginBtn.layer.borderColor = UIColor.whiteColor().CGColor
-        loginBtn.layer.borderWidth = 0.5
-        loginBtn.layer.cornerRadius = 20
+        loginBtn.backgroundColor = LMYellowColor
+        loginBtn.layer.cornerRadius = 15
+        loginBtn.clipsToBounds = true
         return loginBtn
     }()
     
@@ -106,5 +123,14 @@ class LMLoginViewController: UIViewController {
     private lazy var shakePwd:AFViewShaker = {
        let shake = AFViewShaker(view: self.passWordView)
         return shake
+    }()
+    
+    private lazy var registerBtn:UIButton = {
+        let register:UIButton = UIButton(frame: CGRect(x: 45, y: CGRectGetMaxY(self.loginButton.frame) + 10, width: 80, height: 30))
+        register.setTitle("快速注册", forState: .Normal)
+        register.setTitleColor(LMGayColor, forState: .Normal)
+        register.titleLabel?.font = UIFont.systemFontOfSize(14)
+        register.addTarget(self, action: "clickRegisterBtn", forControlEvents: .TouchUpInside)
+        return register
     }()
 }

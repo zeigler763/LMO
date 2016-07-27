@@ -13,7 +13,7 @@ class LMMainNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        self.navigationBar.barTintColor = LMBlueColor
+        self.navigationBar.barTintColor = LMYellowColor
         self.navigationBar.translucent = false
         
         //文字颜色的属性

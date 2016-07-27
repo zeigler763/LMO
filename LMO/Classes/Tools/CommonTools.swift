@@ -3,8 +3,9 @@
 import UIKit
 import Foundation
 
+//字体名称 Baubau
 // 蓝色
-let LMBlueColor = UIColor.colorWithHexString("#99D1D3")
+let LMYellowColor = UIColor.colorWithHexString("#FFD306")
 // 灰色
 let LMGayColor = UIColor.colorWithHexString("#909090")
 //黑色

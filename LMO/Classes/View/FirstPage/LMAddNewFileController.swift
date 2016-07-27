@@ -88,7 +88,7 @@ class LMAddNewFileController: UIViewController {
         
         remarkTextView.snp_makeConstraints(closure: { (make) in
             make.left.equalTo(remarkLabel.snp_right)
-            make.top.right.equalTo(remark).offset(2)
+            make.top.right.equalTo(remark).offset(0.5)
             make.bottom.equalTo(remark).offset(-5)
         })
         
@@ -148,7 +148,7 @@ class LMAddNewFileController: UIViewController {
     
     lazy var saveBtn:UIButton = {
         let saveBtn:UIButton = UIButton()
-        saveBtn.backgroundColor = LMBlueColor
+        saveBtn.backgroundColor = LMYellowColor
         saveBtn.setTitle("提交", forState: .Normal)
         saveBtn.addTarget(self, action: #selector(LMAddNewFileController.clickSaveBtn(_:)), forControlEvents: .TouchUpInside)
         return saveBtn
