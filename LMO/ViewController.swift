@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    private lazy var dataArray: [String] = ["新浪初始数据2","新浪初始数据1","新浪初始数据0"]
+    private lazy var dataArray: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +22,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.snp_makeConstraints { (make) in
             make.edges.equalTo(view)
         }
-        
-        tableView.addSubview(refreshControl)
-        
+//
+//        tableView.addSubview(refreshControl)
+//        
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        view.addSubview(holdView)
+        holdView.snp_makeConstraints { (make) in
+            make.edges.equalTo(view)
+        }
+        
+        loadData()
         
     }
     
@@ -40,6 +46,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
+                self.holdView.removeFromSuperview()
                 // 添加到集合
                 self.dataArray = temp + self.dataArray
                 
@@ -82,6 +89,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let refresh = ZGRefreshControl()
         refresh.addTarget(self, action: #selector(ViewController.loadData), forControlEvents: .ValueChanged)
         return refresh
+    }()
+    
+    private lazy var holdView:LMHoldingView = {
+       let hold = LMHoldingView()
+        return hold
     }()
 
 }

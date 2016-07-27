@@ -19,7 +19,7 @@ enum LMRequestMethod: String {
 class LMNetworkTools: NSObject {
    
     //请求地址
-    let NetString = "http://192.168.1.16:9501"
+    let NetString = "http://192.168.1.33:9501"
     
     //定义回调的别名
     typealias LMRequestCallBack = (response: AnyObject?, error: NSError?)->()

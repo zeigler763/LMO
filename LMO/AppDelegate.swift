@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.sharedManager().enable = true
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.selectViewController(_:)), name: LMChangeRootVCNotification, object: nil)
+        
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         window?.rootViewController = LMMainTabBarController()
@@ -26,6 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    func selectViewController(notfi:NSNotification){
+        window?.rootViewController = LMMainTabBarController()
     }
 
     func applicationWillResignActive(application: UIApplication) {

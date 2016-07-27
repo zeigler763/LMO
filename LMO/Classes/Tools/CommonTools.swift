@@ -26,7 +26,7 @@ let LMHeadBackColor = UIColor.colorWithHexString("#F0F0F0")
 let LMHeadTextColor = UIColor.colorWithHexString("#646464")
 
 // 根控制器切换通知
-let LMChangeRootVCNotification = "ZLChangeRootVCNotification"
+let LMChangeRootVCNotification = "LMChangeRootVCNotification"
 
 /// 屏幕宽度
 let SCREENW = UIScreen.mainScreen().bounds.size.width

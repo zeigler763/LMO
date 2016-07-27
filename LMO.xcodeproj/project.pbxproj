@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		87BA857A8ECB255BEB52233F /* Pods_LMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2E18A1CB6599B02F1878DD /* Pods_LMO.framework */; };
+		A31AA7261D48AF8B00ED2459 /* LMUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31AA7251D48AF8B00ED2459 /* LMUserModel.swift */; };
+		A31AA7281D49104500ED2459 /* LMHoldingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31AA7271D49104500ED2459 /* LMHoldingView.swift */; };
 		A36FB2791D475799008AC705 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A36FB2761D475799008AC705 /* FBShimmeringLayer.m */; };
 		A36FB27A1D475799008AC705 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = A36FB2781D475799008AC705 /* FBShimmeringView.m */; };
 		A36FB27C1D475821008AC705 /* ZGRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36FB27B1D475821008AC705 /* ZGRefreshControl.swift */; };
@@ -46,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		2D2E18A1CB6599B02F1878DD /* Pods_LMO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LMO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A31AA7251D48AF8B00ED2459 /* LMUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMUserModel.swift; sourceTree = "<group>"; };
+		A31AA7271D49104500ED2459 /* LMHoldingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMHoldingView.swift; sourceTree = "<group>"; };
 		A36FB2731D475799008AC705 /* FBShimmering-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBShimmering-Prefix.pch"; sourceTree = "<group>"; };
 		A36FB2741D475799008AC705 /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
 		A36FB2751D475799008AC705 /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringLayer.h; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 		A39B3DA41D339B870074B74F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A31AA7251D48AF8B00ED2459 /* LMUserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			children = (
 				A39B3DCB1D350FFC0074B74F /* LMTextView.swift */,
 				A36FB27B1D475821008AC705 /* ZGRefreshControl.swift */,
+				A31AA7271D49104500ED2459 /* LMHoldingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -469,6 +475,7 @@
 				A39B3DBF1D339E3E0074B74F /* LMMainNavigationController.swift in Sources */,
 				A39B3E6A1D377C4D0074B74F /* Reflect+Other.swift in Sources */,
 				A39B3DBE1D339E3E0074B74F /* LMBaseViewController.swift in Sources */,
+				A31AA7281D49104500ED2459 /* LMHoldingView.swift in Sources */,
 				A39B3E811D3DBC660074B74F /* LMLoginViewController.swift in Sources */,
 				A39B3E681D377C4D0074B74F /* Reflect+Convert.swift in Sources */,
 				A36FB27E1D475832008AC705 /* UIView+ES_Extension.swift in Sources */,
@@ -492,6 +499,7 @@
 				A39B3DAE1D339BC50074B74F /* CommonTools.swift in Sources */,
 				A36FB27A1D475799008AC705 /* FBShimmeringView.m in Sources */,
 				A39B3E831D3DD67B0074B74F /* LMTextField.swift in Sources */,
+				A31AA7261D48AF8B00ED2459 /* LMUserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

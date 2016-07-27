@@ -56,6 +56,24 @@ class LMRegisterViewController: UIViewController {
             })
             return
         }
+        
+        LMNetworkTools.sharedTools.userRegister((nameTextView.rightTextFiled?.text)!, pwd: (passWordView.rightTextFiled?.text)!, pwd2: (passWordAgainView.rightTextFiled?.text)!) { (response, error) in
+            
+            if error != nil{
+                print(error)
+                return
+            }
+            print(response)
+            let code = response!["code"] as! String
+            if code == "0000" {
+                WKProgressHUD.popMessage("注册成功", inView: self.view, duration: 1, animated: true)
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+                    self.navigationController?.popViewControllerAnimated(true)
+                })
+            }else{
+                WKProgressHUD.popMessage("此帐号已经有人注册", inView: self.view, duration: 1, animated: true)
+            }
+        }
     }
     
     private lazy var nameTextView:LMTextField = {

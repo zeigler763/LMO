@@ -53,10 +53,16 @@ class LMLoginViewController: UIViewController {
                 return
             }
             print(response)
-            let massage = response!["code"] as! String
-            if massage == "0000" {
+            let code = response!["code"] as! String
+            if code == "0000" {
                 WKProgressHUD.popMessage("登录成功！", inView: self.view, duration: 1, animated: true)
+                let userData = response!["data"] as! [String:AnyObject]
                 
+                let user = LMUserModel.parse(dict: userData)
+                
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+                    NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: LMChangeRootVCNotification, object: nil))
+                })
             }else{
                 self.shakeAccount.shakeWithDuration(0.7, completion: { 
                 })
