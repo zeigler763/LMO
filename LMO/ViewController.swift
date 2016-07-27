@@ -26,8 +26,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //        tableView.addSubview(refreshControl)
 //        
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        view.addSubview(holdView)
-        holdView.snp_makeConstraints { (make) in
+//        view.addSubview(holdView)
+        view.addSubview(noNetView)
+        noNetView.snp_makeConstraints { (make) in
             make.edges.equalTo(view)
         }
         
@@ -46,7 +47,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
-                self.holdView.removeFromSuperview()
+                self.noNetView.removeFromSuperview()
                 // 添加到集合
                 self.dataArray = temp + self.dataArray
                 
@@ -94,6 +95,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     private lazy var holdView:LMHoldingView = {
        let hold = LMHoldingView()
         return hold
+    }()
+    
+    private lazy var noNetView:LMNoNetView = {
+       let noNet = LMNoNetView()
+        return noNet
     }()
 
 }
