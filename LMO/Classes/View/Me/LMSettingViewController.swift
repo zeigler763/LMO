@@ -34,7 +34,7 @@ class LMSettingViewController: UIViewController,UITableViewDataSource,UITableVie
     
     @objc private func clickOutBtn(){
         
-        let alert = UIAlertController(title: nil, message: "您确定退出", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "", message: "您确定退出", preferredStyle: .Alert)
         let alertAction1 = UIAlertAction(title: "确定", style: .Default, handler: { (UIAlertAction) in
             LMUserModel.deleteReflectModel(name: "User")
             LMUserAccountModel.sharedUserAccount.userModel = nil
@@ -57,6 +57,21 @@ class LMSettingViewController: UIViewController,UITableViewDataSource,UITableVie
         cell.textLabel?.text = dataArray[indexPath.row]
         cell.textLabel?.font = UIFont.systemFontOfSize(14)
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        cell?.selected = !(cell?.selected)!
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 12
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = LMBackGayColor
+        return view
     }
     
     private lazy var tableView:UITableView = {
