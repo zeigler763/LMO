@@ -67,6 +67,12 @@ class LMMeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         navigationController?.pushViewController(VC, animated: true)
     }
     
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = LMBackGayColor
+        return view
+    }
+    
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 12
     }
