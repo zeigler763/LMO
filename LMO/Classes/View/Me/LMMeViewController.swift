@@ -55,6 +55,16 @@ class LMMeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         cell?.selected = !(cell?.selected)!
+        let titleString = dataArray[indexPath.section][indexPath.row]
+        var VC:UIViewController!
+        
+        if titleString == "设置" {
+            VC = LMSettingViewController()
+        }
+        if VC == nil{
+            return
+        }
+        navigationController?.pushViewController(VC, animated: true)
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -72,6 +82,7 @@ class LMMeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
        let tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableFooterView = UIView()
         tableView.backgroundColor = LMBackGayColor
         return tableView
     }()

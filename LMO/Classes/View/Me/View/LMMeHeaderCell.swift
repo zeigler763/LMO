@@ -37,6 +37,20 @@ class LMMeHeaderCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        if LMUserAccountModel.sharedUserAccount.userLogin {
+            print("已经登录")
+            nameLabel.text = LMUserAccountModel.sharedUserAccount.userModel!.name!
+            promptLable.hidden = true
+            loginBtn.hidden = true
+            nameLabel.hidden = false
+            descLabel.hidden = false
+        }else{
+            print("没有登录")
+            promptLable.hidden = false
+            loginBtn.hidden = false
+            nameLabel.hidden = true
+            descLabel.hidden = true
+        }
         avatarView.snp_makeConstraints { (make) in
             make.centerY.equalTo(contentView)
             make.left.equalTo(contentView).offset(16)
@@ -60,6 +74,7 @@ class LMMeHeaderCell: UITableViewCell {
             make.bottom.equalTo(avatarView).offset(-15)
             make.left.equalTo(avatarView.snp_right).offset(12)
         }
+        
     }
     
     @objc private func clickLoginBtn(){
@@ -81,21 +96,20 @@ class LMMeHeaderCell: UITableViewCell {
     private lazy var nameLabel:UILabel = {
         let nameLabel = UILabel()
         nameLabel.font = UIFont.systemFontOfSize(13)
-        nameLabel.text = "于世民"
         return nameLabel
     }()
     
     private lazy var descLabel:UILabel = {
        let descLabel = UILabel()
         descLabel.font = UIFont.systemFontOfSize(13)
-        descLabel.text = "好牛逼"
+        descLabel.text = "一个Swift小学生"
         return descLabel
     }()
     
     private lazy var promptLable:UILabel = {
        let promptLabel = UILabel()
         promptLabel.font = UIFont.systemFontOfSize(14)
-//        promptLabel.text = "您还没有登录哦。"
+        promptLabel.text = "您还没有登录哦。"
         return promptLabel
     }()
     

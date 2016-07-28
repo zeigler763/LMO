@@ -59,6 +59,8 @@ class LMLoginViewController: UIViewController {
                 let userData = response!["data"] as! [String:AnyObject]
                 
                 let user = LMUserModel.parse(dict: userData)
+                LMUserModel.save(obj: user, name: "User", duration: ONEYearDate)
+                LMUserAccountModel.sharedUserAccount.userModel = user
                 
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
                     NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: LMChangeRootVCNotification, object: nil))
