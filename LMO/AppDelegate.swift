@@ -19,13 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.sharedManager().enable = true
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.selectViewController(_:)), name: LMChangeRootVCNotification, object: nil)
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         window?.rootViewController = LMMainTabBarController()
         
         window?.makeKeyAndVisible()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.selectViewController(_:)), name: LMChangeRootVCNotification, object: nil)
         
         return true
     }

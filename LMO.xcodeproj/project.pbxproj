@@ -11,6 +11,8 @@
 		A31AA7261D48AF8B00ED2459 /* LMUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31AA7251D48AF8B00ED2459 /* LMUserModel.swift */; };
 		A31AA7281D49104500ED2459 /* LMHoldingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31AA7271D49104500ED2459 /* LMHoldingView.swift */; };
 		A31AA72A1D4914FF00ED2459 /* LMNoNetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31AA7291D4914FF00ED2459 /* LMNoNetView.swift */; };
+		A31AA72C1D49A24000ED2459 /* LMMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31AA72B1D49A24000ED2459 /* LMMeViewController.swift */; };
+		A31AA72E1D49A61D00ED2459 /* LMMeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31AA72D1D49A61D00ED2459 /* LMMeHeaderCell.swift */; };
 		A36FB2791D475799008AC705 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A36FB2761D475799008AC705 /* FBShimmeringLayer.m */; };
 		A36FB27A1D475799008AC705 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = A36FB2781D475799008AC705 /* FBShimmeringView.m */; };
 		A36FB27C1D475821008AC705 /* ZGRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36FB27B1D475821008AC705 /* ZGRefreshControl.swift */; };
@@ -52,6 +54,8 @@
 		A31AA7251D48AF8B00ED2459 /* LMUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMUserModel.swift; sourceTree = "<group>"; };
 		A31AA7271D49104500ED2459 /* LMHoldingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMHoldingView.swift; sourceTree = "<group>"; };
 		A31AA7291D4914FF00ED2459 /* LMNoNetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMNoNetView.swift; sourceTree = "<group>"; };
+		A31AA72B1D49A24000ED2459 /* LMMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMMeViewController.swift; sourceTree = "<group>"; };
+		A31AA72D1D49A61D00ED2459 /* LMMeHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMMeHeaderCell.swift; sourceTree = "<group>"; };
 		A36FB2731D475799008AC705 /* FBShimmering-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBShimmering-Prefix.pch"; sourceTree = "<group>"; };
 		A36FB2741D475799008AC705 /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
 		A36FB2751D475799008AC705 /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringLayer.h; sourceTree = "<group>"; };
@@ -258,6 +262,7 @@
 				A39B3DAC1D339B870074B74F /* View */,
 				A39B3E801D3DBC660074B74F /* LMLoginViewController.swift */,
 				A36FB2851D485ECA008AC705 /* LMRegisterViewController.swift */,
+				A31AA72B1D49A24000ED2459 /* LMMeViewController.swift */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				A39B3E821D3DD67B0074B74F /* LMTextField.swift */,
+				A31AA72D1D49A61D00ED2459 /* LMMeHeaderCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -473,6 +479,7 @@
 			files = (
 				A39B3DB21D339C0D0074B74F /* UIBarButtonItem+Extension.swift in Sources */,
 				A39B3D941D339AD20074B74F /* ViewController.swift in Sources */,
+				A31AA72E1D49A61D00ED2459 /* LMMeHeaderCell.swift in Sources */,
 				A39B3DC81D350C480074B74F /* LMAddNewFileController.swift in Sources */,
 				A39B3E6C1D377C4D0074B74F /* Reflect+Type.swift in Sources */,
 				A39B3DBF1D339E3E0074B74F /* LMMainNavigationController.swift in Sources */,
@@ -496,6 +503,7 @@
 				A36FB27C1D475821008AC705 /* ZGRefreshControl.swift in Sources */,
 				A39B3DCC1D350FFC0074B74F /* LMTextView.swift in Sources */,
 				A39B3DC41D3491F10074B74F /* LMNetworkTools.swift in Sources */,
+				A31AA72C1D49A24000ED2459 /* LMMeViewController.swift in Sources */,
 				A39B3DB91D339DDD0074B74F /* LMFirstPageViewController.swift in Sources */,
 				A39B3DB41D339C0D0074B74F /* UIImage+Extension.swift in Sources */,
 				A36FB2791D475799008AC705 /* FBShimmeringLayer.m in Sources */,

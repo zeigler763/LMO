@@ -17,7 +17,7 @@ class LMMainTabBarController: UITabBarController {
     
     private func addChildViewControllers(){
         addChildViewController(LMFirstPageViewController(), title: "首页", imageName: "home")
-        addChildViewController(ViewController(), title: "我", imageName: "my")
+        addChildViewController(LMMeViewController(), title: "我", imageName: "my")
     }
     
     private func addChildViewController(vc: UIViewController, title:String, imageName: String) {
