@@ -35,27 +35,48 @@ class LMNetworkTools: NSObject {
         //打印请求
         print(urlString)
         print(parameters)
+        
+        var header = Alamofire.Manager.defaultHTTPHeaders
+        
+        if LMUserAccountModel.sharedUserAccount.userLogin {
+            //修改请求头
+            header["x-outrun-user-token"] = LMUserAccountModel.sharedUserAccount.userModel?.token
+        }
+        
+        print(header)
 
         if method == .GET {
-            Alamofire.request(.GET, urlString, parameters: parameters).responseJSON {response in
+//            Alamofire.request(.GET, urlString, parameters: parameters).responseJSON {response in
+//                finished(response: response.result.value, error: response.result.error)
+//            }
+            Alamofire.request(.GET, urlString, parameters: parameters, headers: header).responseJSON { response in
                 finished(response: response.result.value, error: response.result.error)
             }
         }
         
         if method == .POST {
-            Alamofire.request(.POST, urlString, parameters: parameters).responseJSON {response in
+//            Alamofire.request(.POST, urlString, parameters: parameters).responseJSON {response in
+//                finished(response: response.result.value, error: response.result.error)
+//            }
+            Alamofire.request(.POST, urlString, parameters: parameters, headers: header).responseJSON { response in
                 finished(response: response.result.value, error: response.result.error)
             }
         }
         
         if method == .DELETE {
-            Alamofire.request(.DELETE, urlString, parameters: parameters).responseJSON {response in
+//            Alamofire.request(.DELETE, urlString, parameters: parameters).responseJSON {response in
+//                finished(response: response.result.value, error: response.result.error)
+//            }
+            Alamofire.request(.DELETE, urlString, parameters: parameters, headers: header).responseJSON { response in
                 finished(response: response.result.value, error: response.result.error)
             }
         }
         
         if method == .PUT {
-            Alamofire.request(.PUT, urlString, parameters: parameters).responseJSON {response in
+//            Alamofire.request(.PUT, urlString, parameters: parameters).responseJSON {response in
+//                finished(response: response.result.value, error: response.result.error)
+//            }
+            Alamofire.request(.PUT, urlString, parameters: parameters, headers: header).responseJSON { response in
                 finished(response: response.result.value, error: response.result.error)
             }
         }
@@ -91,5 +112,34 @@ extension LMNetworkTools{
         
         request(.POST, urlString: urlString, parameters: params, finished: finished)
 
+    }
+}
+
+extension LMNetworkTools{
+    
+    //添加room
+    func roomAdd(name:String,finished:LMRequestCallBack) {
+        let urlString = NetString + "/meeting/room"
+        
+        let params = [
+           "name":name
+        ]
+        
+        request(.POST, urlString: urlString, parameters: params, finished: finished)
+    }
+    
+    //添加meeting
+    func meetingAdd(begin_time:String,end_time:String,day:String, finished:LMRequestCallBack) {
+        let urlString = NetString + "/meeting/meeting"
+        
+        let params = [
+            "room_id":"4",
+            "begin_time":begin_time,
+            "end_time":end_time,
+            "day":day
+        ]
+        
+        request(.POST, urlString: urlString, parameters: params, finished: finished)
+        
     }
 }

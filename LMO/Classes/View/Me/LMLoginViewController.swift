@@ -9,6 +9,7 @@
 import UIKit
 import AFViewShaker
 import WKProgressHUD
+import Alamofire
 
 class LMLoginViewController: UIViewController {
 

@@ -14,6 +14,14 @@ class LMFirstPageViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.whiteColor()
         
+        LMNetworkTools.sharedTools.meetingAdd("09:01:02", end_time: "09:03:00", day: "2016-02-02") { (response, error) in
+            if error != nil{
+                print(error)
+                return
+            }
+            print(response)
+        }
+        
         setupUI()
     }
     
