@@ -139,7 +139,7 @@ class LMLoginViewController: UIViewController {
         register.setTitle("快速注册", forState: .Normal)
         register.setTitleColor(LMGayColor, forState: .Normal)
         register.titleLabel?.font = UIFont.systemFontOfSize(14)
-        register.addTarget(self, action: "clickRegisterBtn", forControlEvents: .TouchUpInside)
+        register.addTarget(self, action: #selector(LMLoginViewController.clickRegisterBtn), forControlEvents: .TouchUpInside)
         return register
     }()
 }
