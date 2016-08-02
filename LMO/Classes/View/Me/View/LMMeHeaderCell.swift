@@ -116,7 +116,7 @@ class LMMeHeaderCell: UITableViewCell {
     private lazy var loginBtn:UIButton = {
         let loginBtn = UIButton()
         loginBtn.setTitle("马上登录", forState: .Normal)
-        loginBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        loginBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         loginBtn.titleLabel?.font = UIFont.systemFontOfSize(15)
         loginBtn.backgroundColor = LMYellowColor
         loginBtn.addTarget(self, action: #selector(LMMeHeaderCell.clickLoginBtn), forControlEvents: .TouchUpInside)

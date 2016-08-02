@@ -5,7 +5,7 @@ import Foundation
 
 //字体名称 Baubau
 // 蓝色
-let LMYellowColor = UIColor.colorWithHexString("#FFD306")
+let LMYellowColor = UIColor.colorWithHexString("#5B5B5B")
 // 灰色
 let LMGayColor = UIColor.colorWithHexString("#909090")
 //黑色
